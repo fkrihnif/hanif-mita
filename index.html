@@ -13,6 +13,38 @@
     <div class="container mb-5" style="margin-top: 40px">
       <div class="row">
         <div class="col-md-12">
+        <button type="button" class="btn btn-sm mb-3" data-toggle="modal" data-target="#staticBackdrop" style="background-color: #0984e3; color: white">
+          Niat :)
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Luruskan Niat</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+              <p id="demo" style="text-align: center;"></p> 
+                  Bismillah.. <br>
+                  Teruntuk diri saya pribadi dan juga kamu yang kelak akan menjadi istriku... <br>
+                  Mari kita luruskan niat, untuk apa kita menikah? <br>
+                  Ketahuilah bahwa segala amalan tergantung dari niat.. <br>
+                  bukankah pernikahan ini merupakan <b>ibadah terpanjang?</b> <br>
+                  Maka niatkan pernikahan kita ini untuk <b>semakin taat kepada Allah</b>, sebagai <b>penyempurna sebagian agama kita</b>, untuk <b>mentaati perintah Allah dan Rasul-Nya</b>, sebagai <b>pemberat amal kebaikan kita dihari kiamat</b>... <br>
+                  <br>
+                  Semoga Allah memudahkan hajat kita, semoga Allah meridhoi dan memberkahi pernikahan kita nanti, aamiin yaa Robbal 'alamiin 😊 <br> 
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
           <div class="card">
             <div class="card-header">
               Link
@@ -65,7 +97,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 
-      <script>
+    <script>
       
       $('body').on('click', '#create', function () {
     
@@ -97,6 +129,37 @@
           trigger: 'focus'
         })
 
+      </script>
+
+      <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("Jul 22, 2023 10:00:00").getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        document.getElementById("demo").innerHTML = days + "H " + hours + "j "
+        + minutes + "m " + seconds + "d ";
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+      }, 1000);
       </script>
   </body>
 </html>
