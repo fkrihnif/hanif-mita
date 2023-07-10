@@ -16,7 +16,10 @@
         <button type="button" class="btn btn-sm mb-3" data-toggle="modal" data-target="#staticBackdrop" style="background-color: #0984e3; color: white">
           Niat :)
         </button>
-        <!-- Modal -->
+        <button type="button" class="btn btn-sm mb-3" data-toggle="modal" data-target="#staticBackdrop2" style="background-color: #e84393; color: white">
+          An-Nasihah ♥️
+        </button>
+        <!-- Modal niat -->
         <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -37,6 +40,29 @@
                   <br>
                   Semoga Allah memudahkan hajat kita, semoga Allah meridhoi dan memberkahi pernikahan kita nanti, aamiin yaa Robbal 'alamiin 😊 <br> 
 
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal quotes -->
+        <div class="modal fade" id="staticBackdrop2" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Quotes</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="outer-container">
+                  <p id="quotes"></p>
+                  <button id="generate" class="btn btn-sm btn-success">Another</button>
+             </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -160,6 +186,69 @@
           document.getElementById("demo").innerHTML = "EXPIRED";
         }
       }, 1000);
+      </script>
+
+      <script>
+        //Final JavaScript
+        const generateQuote = function() {
+            const quotes = [
+            {
+                quote: "“Wanita itu bagaikan tulang rusuk. Bila engkau ingin meluruskannya, niscaya engkau menjadikannya patah, dan bila engkau bersenang-senang dengannya, niscaya engkau dapat bersenang-senang dengannya, sedangkan ia adalah bengkok.” (Muttafaqun ‘alaihi)",
+            },
+            {
+                quote: "“Bila seorang istri telah mendirikan shalat lima waktu, berpuasa bulan Ramadan, menjaga kesucian dirinya, dan taat kepada suaminya, niscaya kelak akan dikatakan kepadanya, ‘Silakan engkau masuk ke surga dari pintu mana pun yang engkau suka.’” (Hr. Ahmad dan lainnya)",
+            },
+            {
+                quote: "“Dahulu Nabi shallallahu ‘alaihi wa sallam mengerjakan sebagian pekerjaan istrinya, dan bila beliau mendengar suara azan dikumandangkan, maka beliau bergegas menuju ke mesjid.” (Hr. Bukhari)",
+            },
+            {
+                quote: "“Sungguh beruntung orang yang diberi petunjuk dalam Islam, diberi rizki yang cukup, dan Allah memberikan sifat qana’ah atas apa yang diberikan kepadanya.” (HR. Muslim, no. 1054).",
+     
+            },
+            {
+                quote: "“Sebaik-baik kalian adalah yang paling baik terhadap keluarganya. Dan akulah yang paling baik di antara kalian dalam bermuamalah dengan keluargaku.”",
+       
+            },
+            {
+                quote: "Urwah bertanya kepada Aisyah, “Wahai Ummul Mukminin, apakah yang dikerjakan Rasulullah shallallahu ‘alaihi wa sallam tatkala bersamamu (di rumahmu)?” Aisyah menjawab, “Beliau melakukan seperti apa yang dilakukan salah seorang dari kalian jika sedang membantu istrinya. Beliau mengesol sandalnya, menjahit bajunya dan mengangkat air di ember.” (H.R. Ibnu Hibban).",
+      
+            },
+            {
+                quote: "“Ingatlah, hendaknya kalian berwasiat yang baik kepada para istri.” (H.R. Tirmidzi dan dinyatakan hasan oleh Syaikh al-Albani).",
+     
+            },
+            {
+                quote: "“Orang mukmin yang paling sempurna imannya adalah yang paling baik akhlaknya. Dan orang yang paling baik di antara kalian adalah orang yang paling baik kepada istrinya.” (HR. At-Tirmidzi, 3: 466;  Ahmad, 2: 250 dan Ibnu Hibban, 9: 483)",
+         
+            },
+            {
+                quote: "“Dan pergaulilah istrimu dengan (akhlak yang) baik. Kemudian jika kamu tidak menyukai mereka, (maka bersabarlah), karena boleh jadi kamu tidak menyukai sesuatu, padahal Allâh menjadikan padanya kebaikan yang banyak.” (QS. An-Nisâ’: 19)",
+     
+            },
+            {
+                quote: "“Wanita mana saja yang meninggal dunia lantas suaminya ridha padanya, maka ia akan masuk surga.” (HR. Tirmidzi no. 1161 dan Ibnu Majah no. 1854. Abu Isa Tirmidzi mengatakan bahwa hadits ini hasan gharib. Al Hafizh Abu Thohir mengatakan bahwa sanad hadits ini hasan)",
+     
+            },
+            {
+                quote: "Pernah ditanyakan kepada Rasulullah shallallahu ‘alaihi wa sallam, “Siapakah wanita yang paling baik?” Jawab beliau, “Yaitu yang paling menyenangkan jika dilihat suaminya, mentaati suami jika diperintah, dan tidak menyelisihi suami pada diri dan hartanya sehingga membuat suami benci” (HR. An-Nasai no. 3231 dan Ahmad 2: 251. Syaikh Al Albani mengatakan bahwa hadits ini hasan shahih)",
+     
+            },
+            {
+                quote: "“Sebab itu maka wanita yang saleh, ialah yang taat kepada Allah lagi memelihara diri ketika suaminya tidak ada, oleh karena Allah telah memelihara (mereka).” (QS. An Nisa [4]: 34)",
+     
+            },
+        ];
+
+            let arrayIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quotes").innerHTML = quotes[arrayIndex].quote;
+
+
+        }
+        window.onload = function() {
+            generateQuote();
+            document.getElementById("generate").addEventListener('click', generateQuote);
+        }
+
       </script>
   </body>
 </html>
