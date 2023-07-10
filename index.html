@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-    <title>Data Siswa</title>
+    <title>Hanif Mita - Create Link Wedding</title>
   </head>
 
   <body>
 
-    <div class="container" style="margin-top: 80px">
+    <div class="container mb-5" style="margin-top: 40px">
       <div class="row">
         <div class="col-md-12">
           <div class="card">
@@ -20,7 +20,6 @@
             <div class="card-body">
                 <label for="">Nama Tamu</label>
                 <input type="text" class="form-control" id="guest" name="guest" autofocus onfocus="this.value=''" >
-                <!-- <button onclick="document.getElementById('guest').value = ''">Clear input field</button> -->
                 
                 <a href="javascript:void(0)" id="create" class="btn btn-primary btn-sm mt-1 mb-1">Create</a>
 
@@ -28,11 +27,21 @@
                 Assalamu’alaikum Wr. Wb. <br>
                 Bismillahirrahmanirrahim <br>
 
-                Yth. <div id="namaTamu"></div> <br>
+                Yth. <b><div id="namaTamu"></div></b> <br>
 
-                Tanpa mengurangi rasa hormat, perkenankan kami mengundang bapak/ibu/saudara/i untuk menghadiri acara pernikahan kami: <br>
-                ♥️ Muhammad Fikri Hanif & Tara Kamita Riduana ♥️ <br><br>
+                Tanpa mengurangi rasa hormat, perkenankan kami mengundang bapak/ibu/saudara/i untuk menghadiri acara pernikahan kami: <br> <br>
+                ♥️ <b>Muhammad Fikri Hanif & Tara Kamita Riduana</b> ♥️ <br><br>
 
+                <b>• Akad Nikah</b> <br>
+                  Hari & Tanggal : Sabtu, 22 Juli 2023 <br>
+                  Pukul : 09.30 WIB <br>
+                  Tempat : Aula Kolam Renang Delta Kapuas Pontianak, Jl. Nipah Kuning Dalam, Pontianak Barat. <br>
+                <br>
+                <b>• Resepsi Pernikahan</b> <br>
+                  Hari & Tanggal : Sabtu, 22 Juli 2023 <br>
+                  Pukul : 13.00 s/d 18.00 WIB <br>
+                  Tempat: Aula Kolam Renang Delta Kapuas Pontianak, Jl. Nipah Kuning Dalam, Pontianak Barat. <br>
+                <br>
                 Untuk selengkapnya mengenai info undangan dapat mengujungi link berikut : <br>
 
                 <div id="linkUndangan"></div> <br>
@@ -45,7 +54,7 @@
 
 
                 <br>
-                <button id="button1" onclick="CopyToClipboard('description')" class="btn btn-success btn-sm">Click to copy desc</button>
+                <button id="button1" onclick="CopyToClipboard('description')" class="btn btn-success btn-sm">Click to copy Text</button>
 
             </div>
           </div>
@@ -85,6 +94,10 @@
         window.getSelection().removeAllRanges();
         alert('Success Copy!')
         }
+
+        $('.popover-dismiss').popover({
+          trigger: 'focus'
+        })
 
       </script>
   </body>
